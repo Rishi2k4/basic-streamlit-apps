@@ -39,7 +39,7 @@ def create_pdf(name, email, phone, summary, skills, education, experience):
     pdf.output("resume.pdf")
 
 # Streamlit app
-st.title("📄 Resume Builder App")
+st.title(" Resume Builder App 📄")
 
 st.header("Enter your details:")
 
@@ -47,11 +47,12 @@ name = st.text_input("Full Name")
 email = st.text_input("Email")
 phone = st.text_input("Phone")
 summary = st.text_area("Professional Summary")
-skills = st.text_area("Skills (comma separated)")
+skills = st.text_area("Skills")
 education = st.text_area("Education")
+interest = st.text_area("Interests")
 experience = st.text_area("Experience")
 
 if st.button("Generate Resume PDF"):
-    create_pdf(name, email, phone, summary, skills, education, experience)
+    create_pdf(name, email, phone, summary, skills, education,interest, experience)
     with open("resume.pdf", "rb") as file:
         st.download_button("📥 Download Resume", file, file_name="resume.pdf", mime="application/pdf")
