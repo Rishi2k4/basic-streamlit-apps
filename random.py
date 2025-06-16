@@ -3,7 +3,7 @@ import random
 import string
 
 # App title
-st.title("🔐 Random Password Generator")
+st.title(" Random Password Generator 🔐")
 
 # Sidebar for user inputs
 st.sidebar.header("Customize Your Password")
